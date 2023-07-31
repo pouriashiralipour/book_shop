@@ -1,4 +1,5 @@
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
 
 from .models import Book
 
@@ -27,4 +28,7 @@ class BookUpdateView(UpdateView):
 
 
 class BookDeleteView(DetailView):
-    pass
+    model = Book
+    template_name = 'books/delete_view.html'
+    success_url = reverse_lazy('book:list_view')
+
