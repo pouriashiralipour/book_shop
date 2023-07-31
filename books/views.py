@@ -1,4 +1,4 @@
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
 from .models import Book
 
@@ -18,3 +18,13 @@ class BookCreateView(CreateView):
     model = Book
     fields = ['title', 'author', 'content', 'price']
     template_name = 'books/create_view.html'
+
+
+class BookUpdateView(UpdateView):
+    model = Book
+    fields = ['title', 'author', 'content', 'price']
+    template_name = 'books/update_view.html'
+
+
+class BookDeleteView(DetailView):
+    pass
