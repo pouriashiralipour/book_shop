@@ -1,0 +1,14 @@
+{% extends '_base.html' %}
+{% load crispy_forms_filters %}
+
+{% block title %}
+	حذف کردن کتاب
+{% endblock %}
+
+{% block content %}
+    <form action="" method="post">
+        <h1>حذف کتاب{{ book.title }}</h1>
+        <p>آِیا مطمئنین ؟</p>
+        <input class="btn btn-warning mt-3" type="button" value="بله"></input>
+    </form>
+{% endblock %}
