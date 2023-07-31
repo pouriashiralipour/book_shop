@@ -16,4 +16,4 @@ class Book(models.Model):
         ordering = ['-datetime_created']
 
     def __str__(self):
-        return self.title
+        return f'{self.author}: {self.title}'
