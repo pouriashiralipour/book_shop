@@ -5,5 +5,10 @@
 {% endblock %}
 
 {% block content %}
-	Home Page
+	<h1>Home Page</h1>
+    {% if user.is_authenticated %}
+    	<p>Welcome {{ user.username }} | <a href="{% url 'logout' %}">Logout</a></p>
+    {% else %}
+        <a href="{% url 'login' %}">Log In</a> | Sign Up
+    {% endif %} 
 {% endblock %}
