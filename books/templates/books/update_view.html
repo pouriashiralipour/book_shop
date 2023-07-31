@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends '_base.html' %}
+{% load crispy_forms_filters %}
 
-</body>
-</html>
+{% block title %}
+	ویرایش کردن کتاب
+{% endblock %}
+
+{% block content %}
+    <h1>ویرایش کردن کتاب </h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+{% endblock %}
