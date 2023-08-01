@@ -8,6 +8,7 @@ class Book(models.Model):
     author = models.CharField(max_length=200)
     content = models.TextField()
     price = models.PositiveBigIntegerField()
+    cover = models.ImageField(upload_to='covers/', blank=True)
     datetime_created = models.DateTimeField(default=timezone.now)
     datetime_modified = models.DateTimeField(auto_now=True)
 
