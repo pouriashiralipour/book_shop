@@ -1,4 +1,6 @@
 {% extends '_base.html' %}
+{% load persian_translate_numbers %}
+{% load humanize %}
 
 {% block title %}
 	صفحه جزئیات
@@ -24,7 +26,7 @@
                     </div>
                     <div class="col-xs-12 col-md-3 d-flex flex-column">
                         <h3 class="align-self-center pt-2 text-muted align-self-md-end">
-                            {{ book.price }}
+                            {{ book.price|translate_numbers|intcomma:False }}
                         </h3>
                     </div>
                 </div>
