@@ -18,13 +18,13 @@ class BookDetailsView(DetailView):
 
 class BookCreateView(CreateView):
     model = Book
-    fields = ['title', 'author', 'content', 'price', 'cover']
+    fields = ['title', 'author', 'translator', 'content', 'price', 'cover']
     template_name = 'books/create_view.html'
 
 
 class BookUpdateView(UpdateView):
     model = Book
-    fields = ['title', 'author', 'content', 'price', 'cover']
+    fields = ['title', 'author', 'translator', 'content', 'price', 'cover']
     template_name = 'books/update_view.html'
 
 
@@ -32,4 +32,3 @@ class BookDeleteView(DeleteView):
     model = Book
     template_name = 'books/delete_view.html'
     success_url = reverse_lazy('book:list_view')
-
