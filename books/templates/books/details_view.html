@@ -27,9 +27,11 @@
                             <h5 class="small my-1"><span class="text-muted">نویسنده: </span>{{ book.author }}</h5>
                             <h5 class="small my-1"><span class="text-muted">مترجم: </span>{{ book.translator }}</h5>
                             <h5 class="small my-1"><span class="text-muted">انتشارات: </span>هوزمزد</h5>
-                            <a class="btn btn-warning" href="{% url 'book:update_view' book.id %}"> ویرایش</a>
-                            <span> | </span>
-                            <a class="btn btn-danger" href="{% url 'book:delete_view' book.id %}"> حذف</a>
+                            {% if user.is_authenticated %}
+                                <a class="btn btn-warning" href="{% url 'book:update_view' book.id %}"> ویرایش</a>
+                                <span> | </span>
+                                <a class="btn btn-danger" href="{% url 'book:delete_view' book.id %}"> حذف</a>
+                            {% endif %}
                         </div>
                         <div class="col-xs-12 col-md-3 d-flex flex-column">
                             <h3 class="align-self-center pt-2 text-muted align-self-md-end">

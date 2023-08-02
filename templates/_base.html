@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <title>{% block title %}
-    	
+
     {% endblock %}</title>
 </head>
 <body>
@@ -32,27 +32,33 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-link active" aria-current="page" href="{% url 'home' %}">خانه</a>
-                <a class="nav-link" href="{% url 'book:create_view' %}">اضافه کردن کتاب</a>
+                {% if user.is_authenticated %}
+                    <a class="nav-link" href="{% url 'book:create_view' %}">اضافه کردن کتاب</a>
+                {% endif %}
+
             </div>
         </div>
         {% if user.is_authenticated %}
-        	<div class="mx-2 text-white">خوش آمدی {{ user.username }} | <a class="link-light text-decoration-none" href="{% url 'logout' %}">خروج</a></div>
+            <div class="mx-2 text-white">خوش آمدی {{ user.username }} | <a class="link-light text-decoration-none"
+                                                                           href="{% url 'logout' %}">خروج</a></div>
         {% else %}
-            <div class="mx-2 text-white"><a class="link-light text-decoration-none" href="{% url 'login' %}">ورود</a> | <a class="link-light text-decoration-none" href="{% url 'signup' %}">ثبت نام</a></div>
+            <div class="mx-2 text-white"><a class="link-light text-decoration-none" href="{% url 'login' %}">ورود</a> |
+                <a class="link-light text-decoration-none" href="{% url 'signup' %}">ثبت نام</a></div>
         {% endif %}
     </div>
 </nav>
 
 <div class="container">
     {% block content %}
-    	
+
     {% endblock %}
 </div>
 
 <footer class="bg-light text-center text-lg-start mt-5">
-  <div class="text-center bg-grey">
-      <p>وبسایت کتاب <a class="text-dark" href="https://pouriashirali.iran.liara.run/" target="_blank">پوریا شیرالی پور</a></p>
-  </div>
+    <div class="text-center bg-grey">
+        <p>وبسایت کتاب <a class="text-dark" href="https://pouriashirali.iran.liara.run/" target="_blank">پوریا شیرالی
+            پور</a></p>
+    </div>
 </footer>
 
 <!-- Bootstrap JS -->
