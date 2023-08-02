@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-02 16:34+0330\n"
+"POT-Creation-Date: 2023-08-02 16:42+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,9 +16,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-#: .\apps.py:7 .\models.py:20 .\models.py:33
-msgid "book"
-msgstr "کتاب"
+
+#: .\apps.py:8 .\models.py:21
+msgid "books"
+msgstr "کتاب ها"
 
 #: .\models.py:9 .\models.py:32
 msgid "user"
@@ -56,9 +57,9 @@ msgstr "تاریخ ساخت"
 msgid "datetime_modified"
 msgstr "تاریخ تغییر"
 
-#: .\models.py:21
-msgid "books"
-msgstr "کتاب ها"
+#: .\models.py:20 .\models.py:33
+msgid "book"
+msgstr "کتاب"
 
 #: .\models.py:34
 msgid "text"
