@@ -14,15 +14,27 @@
                 <div class="px-5 pt-3 pb-5">
                     <form method="POST" enctype="multipart/form-data">
                         {% csrf_token %}
-                    {{ form|crispy }}
-{#                        <div class="form-group py-2">#}
-{#                            <label class="py-1">عنوان کتاب:</label>#}
-{#                            <input type="text" class="form-control" placeholder="" name="title">#}
-{#                        </div>#}
-{#                        <div class="form-group py-2">#}
-{#                            <label class="py-1">توضیحات کتاب:</label>#}
-{#                            <textarea class="form-control" name="text" rows="8" placeholder=""></textarea>#}
-{#                        </div>#}
+{#                        {{ form|crispy }}#}
+                        <div class="form-group py-2">
+                            <label class="py-1">عنوان کتاب:</label>
+                            <input type="text" class="form-control" placeholder="" name="title">
+                        </div>
+                        <div class="form-group py-2">
+                            <label class="py-1">نویسنده:</label>
+                            <input type="text" class="form-control" placeholder="" name="author">
+                        </div>
+                        <div class="form-group py-2">
+                            <label class="py-1">مترجم:</label>
+                            <input type="text" class="form-control" placeholder="" name="author">
+                        </div>
+                        <div class="form-group py-2">
+                            <label class="py-1">قیمت:</label>
+                            <input type="text" class="form-control" placeholder="" name="price">
+                        </div>
+                        <div class="form-group py-2">
+                            <label class="py-1">توضیحات کتاب:</label>
+                            <textarea class="form-control" name="content" rows="8" placeholder=""></textarea>
+                        </div>
                         <button type="submit" class="btn btn-success mt-2">ذخیره</button>
                     </form>
                 </div>
