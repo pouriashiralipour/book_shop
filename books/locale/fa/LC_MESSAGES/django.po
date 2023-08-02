@@ -1,0 +1,81 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-02 16:34+0330\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+#: .\apps.py:7 .\models.py:20 .\models.py:33
+msgid "book"
+msgstr "کتاب"
+
+#: .\models.py:9 .\models.py:32
+msgid "user"
+msgstr "کاربر"
+
+#: .\models.py:10
+msgid "title"
+msgstr "عنوان"
+
+#: .\models.py:11
+msgid "author"
+msgstr "نویسنده"
+
+#: .\models.py:12
+msgid "translator"
+msgstr "مترجم"
+
+#: .\models.py:13
+msgid "content"
+msgstr "محتوا"
+
+#: .\models.py:14
+msgid "price"
+msgstr "قیمت"
+
+#: .\models.py:15
+msgid "cover"
+msgstr "جلد"
+
+#: .\models.py:16 .\models.py:37
+msgid "datetime_created"
+msgstr "تاریخ ساخت"
+
+#: .\models.py:17
+msgid "datetime_modified"
+msgstr "تاریخ تغییر"
+
+#: .\models.py:21
+msgid "books"
+msgstr "کتاب ها"
+
+#: .\models.py:34
+msgid "text"
+msgstr "متن"
+
+#: .\models.py:35
+msgid "is_active"
+msgstr "فعال"
+
+#: .\models.py:36
+msgid "recommend"
+msgstr "پیشنهاد"
+
+#: .\models.py:40
+msgid "comment"
+msgstr "نظر"
+
+#: .\models.py:41
+msgid "comments"
+msgstr "نظر ها"
