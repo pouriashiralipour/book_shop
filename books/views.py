@@ -3,6 +3,7 @@ from django.urls import reverse_lazy
 from django.shortcuts import get_object_or_404, render
 
 from .models import Book
+from .forms import CommentForm
 
 
 class BookListView(ListView):
@@ -19,7 +20,17 @@ def book_details_view(request, pk):
     book = get_object_or_404(Book, pk=pk)
     # get book comments
     book_comments = book.comments.all()
-    return render(request, 'books/details_view.html', {'book': book, 'comments': book_comments})
+
+    if request.method == 'POST':
+        comment_form = CommentForm(request.POST)
+        if comment_form.is_valid():
+            new_comment = comment_form.save(commit=False)
+            new_comment.book = book
+            new_comment.user = request.user
+    else:
+        comment_form = CommentForm()
+    context = {'book': book, 'comments': book_comments, 'comment_form': comment_form}
+    return render(request, 'books/details_view.html', context)
 
 
 class BookCreateView(CreateView):
