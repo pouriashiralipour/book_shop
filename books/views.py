@@ -37,7 +37,7 @@ def book_details_view(request, pk):
 
 class BookCreateView(LoginRequiredMixin, CreateView):
     model = Book
-    fields = ['title', 'author', 'translator', 'content', 'price', 'cover']
+    fields = ['user', 'title', 'author', 'translator', 'content', 'price', 'cover']
     template_name = 'books/create_view.html'
 
 
