@@ -1,5 +1,6 @@
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
+from django.shortcuts import get_object_or_404, render
 
 from .models import Book
 
@@ -11,9 +12,13 @@ class BookListView(ListView):
     context_object_name = 'books'
 
 
-class BookDetailsView(DetailView):
-    model = Book
-    template_name = 'books/details_view.html'
+# class BookDetailsView(DetailView):
+#     model = Book
+#     template_name = 'books/details_view.html'
+def book_details_view(request, pk):
+    book = get_object_or_404(Book, pk=pk)
+
+    return render(request, 'books/details_view.html', {'book': book})
 
 
 class BookCreateView(CreateView):
