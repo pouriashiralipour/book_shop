@@ -9,5 +9,5 @@ class BookAdmin(admin.ModelAdmin):
 
 
 @admin.register(Comment)
-class BookAdmin(admin.ModelAdmin):
-    pass
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ['user', 'book', 'text', 'datetime_created']
