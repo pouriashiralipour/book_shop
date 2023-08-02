@@ -27,6 +27,7 @@ def book_details_view(request, pk):
             new_comment = comment_form.save(commit=False)
             new_comment.book = book
             new_comment.user = request.user
+            new_comment.save()
     else:
         comment_form = CommentForm()
     context = {'book': book, 'comments': book_comments, 'comment_form': comment_form}
